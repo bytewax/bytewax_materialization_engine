@@ -1,6 +1,6 @@
-project: feast_bytewax_demo
-registry: data/registry.db
-provider: local
+project: bytewax_feast_demo
+provider: aws
+registry: s3://bytewax-feast-bucket/registry.pb
 online_store:
   type: sqlite
   path: data/online_store.db
@@ -8,3 +8,4 @@ offline_store:
   type: file
 flags:
   alpha_features: true
+  on_demand_transforms: true

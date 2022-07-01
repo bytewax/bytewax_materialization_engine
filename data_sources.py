@@ -6,13 +6,14 @@ from feast import Entity, Feature, FeatureView, FileSource, ValueType
 from feast.field import Field
 from feast.types import Float32, Int32
 
-# Read data from parquet files. Parquet is convenient for local development mode. For
-# production, you can use your favorite DWH, such as BigQuery. See Feast documentation
-# for more info.
-driver_hourly_stats = FileSource(
-    path="data/driver_stats.parquet",
+driver_stats = FileSource(
+    name="driver_stats_source",
+    path="s3://bytewax-feast-bucket/driver_stats.parquet",
+    s3_endpoint_override="http://s3.us-west-2.amazonaws.com",
     timestamp_field="event_timestamp",
     created_timestamp_column="created",
+    description="A table describing the stats of a driver based on hourly logs",
+    owner="whoahbot@bytewax.io",
 )
 
 # Our parquet files contain sample data that includes a driver_id column, timestamps and
@@ -28,5 +29,5 @@ driver_stats_feature_view = FeatureView(
         Field(name="acc_rate", dtype=Float32),
         Field(name="avg_daily_trips", dtype=Int32),
     ],
-    source=driver_hourly_stats,
+    source=driver_stats,
 )

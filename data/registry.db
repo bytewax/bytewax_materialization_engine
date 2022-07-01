@@ -1,20 +1,0 @@
-
-I
-)
-__dummy"
-__dummy_idJfeast_bytewax_demo
-ÞÄ÷•Ôë¬ÞÄ÷•Ôë¬
-G
-'
-driver"	driver_idJfeast_bytewax_demo
-ÞÄ÷•¨½ð¬ÞÄ÷•¨½ð¬1"$8b4d0ae9-e7f0-48d5-9419-225998bfd9b4*ÞÄ÷•ˆ´¼­2Ÿ
-þ
-driver_statsfeast_bytewax_demodriver"
-	conv_rate"
-acc_rate"
-avg_daily_trips2 8:‰event_timestamp*createdZdata/driver_stats.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/driver_stats.parquet@b
-	driver_id
-ÞÄ÷•ÈÐô¬ÞÄ÷•ÈÐô¬R”
-‘
-,feast.infra.online_stores.sqlite.SqliteTable"a
->/home/whoahbot/code/bytewax/feast_bytewax/data/online_store.dbfeast_bytewax_demo_driver_statsbževent_timestamp*createdZdata/driver_stats.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/driver_stats.parquetªfeast_bytewax_demo

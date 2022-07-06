@@ -173,25 +173,5 @@ class BytewaxMaterializationJob:
         flow = Dataflow()
         flow.flat_map(self.process_path)
         flow.capture()
-        # TODO: use `proc_env` when running in k8s
-        # cluster_main(flow, self.input_builder, self.output_builder, **proc_env())
-        cluster_main(flow, self.input_builder, self.output_builder, [], 0, 1)
-
-
-if __name__ == "__main__":
-    from feast import FeatureStore
-    from datetime import datetime, timedelta
-
-    with open("feature_store.yaml") as f:
-        yaml_config = yaml.safe_load(f)
-
-    config = RepoConfig(**yaml_config)
-    store = FeatureStore(config=config)
-
-    BytewaxMaterializationJob(
-        store.config,
-        store.get_feature_view("driver_stats"),
-        timedelta(days=-1),
-        datetime.now(),
-        "drivers",
-    )
+        cluster_main(flow, self.input_builder, self.output_builder, **proc_env())
+        # cluster_main(flow, self.input_builder, self.output_builder, [], 0, 1)

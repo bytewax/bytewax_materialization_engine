@@ -9,7 +9,7 @@ from typing import List, Tuple, Optional, Iterable, Any
 from bytewax import cluster_main, Dataflow, inputs, AdvanceTo, Emit
 from bytewax.parse import proc_env
 
-from feast import Entity, FeatureView, RepoConfig
+from feast import Entity, FeatureView, RepoConfig, FeatureStore
 from feast.feature_view import DUMMY_ENTITY_ID
 from feast.infra.provider import _convert_arrow_to_proto
 

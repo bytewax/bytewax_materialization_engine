@@ -6,7 +6,7 @@ RUN /venv/bin/pip install -r requirements.txt
 
 FROM build
 
-COPY bytewax_materialization_job.py .
+COPY bytewax_materialization_dataflow.py .
 COPY dataflow.py .
 COPY data/online_store.db data/online_store.db
 

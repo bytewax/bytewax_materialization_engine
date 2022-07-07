@@ -16,7 +16,7 @@ from feast.infra.provider import _convert_arrow_to_proto
 from tqdm import tqdm
 
 
-class BytewaxMaterializationJob:
+class BytewaxMaterializationDataflow:
     def __init__(
         self,
         config: RepoConfig,
